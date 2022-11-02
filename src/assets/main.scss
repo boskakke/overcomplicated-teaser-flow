@@ -175,9 +175,13 @@
 	.main-flow__side,
 	.main-flow__bottom {
 		.t-vertical {
+			
 			width: calc(50% - var(--grid-gap) / 2);
 			& + .t-vertical {
 				margin-left: calc(var(--grid-gap) );
+			}
+			.teaser__body {
+				padding: 0;
 			}
 		}
 
