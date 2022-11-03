@@ -168,6 +168,10 @@
 		flex: 0 0 100%;
 
 	}
+	// makse shure last teaser after .t-vertical clears float from t.vertical.
+	.t-vertical + .teaser:not(.t-vertical) {
+		clear: left;
+	}
 }
 
 @include sm-down {
