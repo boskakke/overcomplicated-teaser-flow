@@ -10,8 +10,6 @@ import { provide } from "@vue/runtime-core";
 const counter = ref(3);
 const inverted = ref(false);
 
-
-
 const teasers = reactive([
   {
     title: "Forskere: Gråt hår kan faktisk genvinde sin farve",
@@ -24,12 +22,14 @@ const teasers = reactive([
     id: 2,
   },
   {
-    title: "Videnskabens største kontroverser: Italiensk læge vil transplantere et hoved",
+    title:
+      "Videnskabens største kontroverser: Italiensk læge vil transplantere et hoved",
     class: "t-default",
     id: 3,
   },
   {
-    title: "Ægtepar bag covid-vaccine: Så hurtigt kan vi have en kræft-vaccine klar",
+    title:
+      "Ægtepar bag covid-vaccine: Så hurtigt kan vi have en kræft-vaccine klar",
     class: "t-default",
     id: 4,
   },
@@ -39,7 +39,8 @@ const teasers = reactive([
     id: 5,
   },
   {
-    title: "Kæmpe undersøgelse: Så mange skridt skal du gå om dagen for at leve længere",
+    title:
+      "Kæmpe undersøgelse: Så mange skridt skal du gå om dagen for at leve længere",
     class: "t-default",
     id: 6,
   },
@@ -80,13 +81,13 @@ provide("inverted", inverted);
         </div>
       </div>
 
-      <TeaserFlow3  v-if="counter == 3" />
+      <TeaserFlow3 v-if="counter == 3" />
 
-      <TeaserFlow4  v-if="counter == 4" />
+      <TeaserFlow4 v-if="counter == 4" />
 
-      <TeaserFlow5  v-if="counter == 5" />
+      <TeaserFlow5 v-if="counter == 5" />
 
-      <TeaserFlow6  v-if="counter == 6" />
+      <TeaserFlow6 v-if="counter == 6" />
 
       <!-- <pre>{{teasers}}</pre> -->
     </div>
@@ -94,27 +95,7 @@ provide("inverted", inverted);
 </template>
 
 <style scoped lang="scss">
-.controls {
-  border-radius: 5px;
-  background-image: linear-gradient(to bottom, lighten(#333, 4%), #333);
-  border: 1px solid #444;
-  z-index: 2;
-  width: 100%;
-  margin: 4rem 0;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  gap: 1rem;
-  position: sticky;
-  top: 1rem;
-}
-.radio {
-  display: flex;
-  gap: 1rem;
-}
-label {
-  cursor: pointer;
-}
+
 </style>
 
 
