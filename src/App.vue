@@ -9,40 +9,43 @@ import { provide } from "@vue/runtime-core";
 
 const counter = ref(3);
 const inverted = ref(false);
-provide("inverted", inverted);
+
+
 
 const teasers = reactive([
   {
     title: "Forskere: Gråt hår kan faktisk genvinde sin farve",
-    class: "skakke",
+    class: "t-default",
     id: 1,
   },
   {
     title: "Forskere er et skridt tættere på en kur mod skaldede isser",
-    class: "skakke",
+    class: "t-default",
     id: 2,
   },
   {
     title: "Videnskabens største kontroverser: Italiensk læge vil transplantere et hoved",
-    class: "skakke",
+    class: "t-default",
     id: 3,
   },
   {
     title: "Ægtepar bag covid-vaccine: Så hurtigt kan vi have en kræft-vaccine klar",
-    class: "skakke",
+    class: "t-default",
     id: 4,
   },
   {
     title: "Så meget strøm og vand sparer øko-programmet",
-    class: "skakke",
+    class: "t-default",
     id: 5,
   },
   {
     title: "Kæmpe undersøgelse: Så mange skridt skal du gå om dagen for at leve længere",
-    class: "skakke",
+    class: "t-default",
     id: 6,
   },
 ]);
+provide("teasers", teasers);
+provide("inverted", inverted);
 </script>
 
 <template>
@@ -77,13 +80,15 @@ const teasers = reactive([
         </div>
       </div>
 
-      <TeaserFlow3 :teasers="teasers" v-if="counter == 3" />
+      <TeaserFlow3  v-if="counter == 3" />
 
-      <TeaserFlow4 :teasers="teasers" v-if="counter == 4" />
+      <TeaserFlow4  v-if="counter == 4" />
 
-      <TeaserFlow5 :teasers="teasers" v-if="counter == 5" />
+      <TeaserFlow5  v-if="counter == 5" />
 
-      <TeaserFlow6 :teasers="teasers" v-if="counter == 6" />
+      <TeaserFlow6  v-if="counter == 6" />
+
+      <!-- <pre>{{teasers}}</pre> -->
     </div>
   </main>
 </template>

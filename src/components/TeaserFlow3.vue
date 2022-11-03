@@ -15,10 +15,11 @@ import { inject } from "@vue/runtime-core";
 import Teaser from "./Teaser.vue";
 
 defineProps({
-  teasers: {
-    type: Array,
-    required: true,
-  },
+  // teasers: {
+  //   type: Array,
+  //   required: true,
+  // },
 });
 let inverted = inject("inverted");
+let teasers = inject("teasers");
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="teaser" :class="className">
+  <div class="teaser" :class="teaser.class">
     <figure class="teaser__figure">
       <img :src="getImage()" alt="" />
     </figure>
@@ -7,7 +7,7 @@
       <h2 class="teaser__title">{{ teaser.title }}</h2>
     </div>
 
-    <select name="className" v-model="className" class="teaserControls">
+    <select name="className" v-model="teaser.class" class="teaserControls">
       <option value="t-default" selected>Image right</option>
       <option value="t-hide-image">Hide image</option>
       <option value="t-vertical">Vertical</option>
@@ -26,7 +26,7 @@ const props = defineProps({
   },
 });
 
-const className = ref("t-default");
+// const className = ref("t-default");
 const getImage = () => {
   
   const id = 238 + props.teaser.id

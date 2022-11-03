@@ -22,4 +22,5 @@ defineProps({
   },
 });
 let inverted = inject("inverted");
+let teasers = inject("teasers");
 </script>
